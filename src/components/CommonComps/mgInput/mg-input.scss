@@ -1,0 +1,62 @@
+.mg-input{
+  width: 40vw;
+  position: relative;
+  font-size: 14px;
+  display: inline-block;
+  -webkit-app-region: no-drag;
+  .mg-input__prefix{
+    position: absolute;
+    left: 10px;
+    top: 0;
+    height: 100%;
+    line-height: 4.7vh;
+    text-align: center;
+    cursor: pointer;
+  }
+  .mg-input__inner{
+    -webkit-appearance: none;
+    background-color: #FBFBFB;
+    border: 1px solid #dcdfe6;
+    border-bottom: 1px solid #868686;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: #333;
+    display: inline-block;
+    font-size: inherit;
+    font-weight: 500;
+    height: 4vh;
+    line-height: 40px;
+    padding: 0 30px 1px 30px;
+    transition: all .2s ease-in-out;
+    width: 100%;
+    &:focus{
+      outline: none;
+      border-bottom: 2px solid #E50078;
+      background-color: #FBFBFB;
+      padding-bottom: 0px;
+    }
+    &::-webkit-input-placeholder {
+      color: #B5B5B5;
+      font-size: 12px;
+      font-weight: bolder;
+    }
+  }
+  .mg-input__suffix{
+    position: absolute;
+    right: 10px;
+    top: 4.7px;
+    border-radius: 4px;
+    padding: 4px;
+    text-align: center;
+    transition: all .3s;
+    cursor: pointer;
+    &:hover{
+      background-color: #F6F6F6;
+    }
+  }
+}
+
+
+
+
+

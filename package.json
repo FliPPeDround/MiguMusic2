@@ -1,0 +1,52 @@
+{
+  "name": "migumusic",
+  "version": "0.0.1",
+  "main": "electron/main.js",
+  "scripts": {
+    "vitedev": "vite",
+    "vitebuild": "vite build",
+    "serve": "vite preview",
+    "electron": "wait-on tcp:3000 && cross-env NODE_ENV=development electron .",
+    "dev": "concurrently -k \"pnpm vitedev\" \"pnpm electron\"",
+    "build": "vite build && electron-builder"
+  },
+  "dependencies": {
+    "@element-plus/icons": "^0.0.11",
+    "axios": "^0.24.0",
+    "element-plus": "^1.2.0-beta.3",
+    "pinia": "^2.0.0-rc.10",
+    "unplugin-vue-components": "^0.17.2",
+    "vue": "^3.2.16",
+    "vue-router": "4"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^1.9.3",
+    "concurrently": "^6.3.0",
+    "cross-env": "^7.0.3",
+    "electron": "^15.3.1",
+    "electron-builder": "^22.13.1",
+    "sass": "^1.43.4",
+    "vite": "^2.6.4",
+    "wait-on": "^6.0.0"
+  },
+  "build": {
+    "appId": "com.your-website.your-app",
+    "productName": "MiguMusic",
+    "copyright": "Copyright © 2021 FliPPeDround",
+    "mac": {
+      "category": "public.app-category.utilities"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    },
+    "files": [
+      "dist/**/*",
+      "electron/**/*"
+    ],
+    "directories": {
+      "buildResources": "assets",
+      "output": "dist_electron"
+    }
+  }
+}

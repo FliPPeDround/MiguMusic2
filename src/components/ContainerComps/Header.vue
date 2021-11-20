@@ -3,7 +3,21 @@
     <div class="logo-box">
       <img src="./../../assets/logo.png">
     </div>
-    <Input v-model="searchWord"/>
+    <el-popover
+      v-model:visible="visible"
+      placement="bottom"
+      trigger="manual"
+      :width="300"
+    >
+      <div>歌曲-歌手</div>
+      <template #reference>
+        <Input
+          v-model="searchWord"
+          @focus="onFocus"
+          @input="onInput"
+          @blur="onBlur"/>
+      </template>
+    </el-popover>
     <div class="frame-box">
       <el-icon @click="minimize"><Minus /></el-icon>
       <el-icon @click="close"><Close /></el-icon>
@@ -18,6 +32,18 @@ import { ref } from 'vue'
 const { ipcRenderer }  = window.require('electron')
 
 const searchWord = ref('')
+const visible = ref(false)
+const onFocus = () => {
+  console.log('this is focus')
+  visible.value = true
+}
+const onInput = () => {
+  console.log('this is input')
+}
+const onBlur = () => {
+  console.log('this is blur')
+  visible.value = false
+}
 
 // frame-box
 const minimize = () => {

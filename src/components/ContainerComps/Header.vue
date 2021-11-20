@@ -5,8 +5,8 @@
     </div>
     <Input v-model="searchWord"/>
     <div class="frame-box">
-        <el-icon @click="minimize"><Minus /></el-icon>
-        <el-icon @click="close"><Close /></el-icon>
+      <el-icon @click="minimize"><Minus /></el-icon>
+      <el-icon @click="close"><Close /></el-icon>
     </div>
   </div>
 </template>
@@ -49,16 +49,16 @@ const close = () => {
     height: 40px;
     display: flex;
     align-items: center;
-    font-size: x-large;
     -webkit-app-region: no-drag;
     i {
       color: #999999;
-      cursor: wait;
-      padding-left: 20px;
+      font-size: 18px;
       &:hover {
-        color: #E50078;
-        cursor: pointer;
+        color: #e50076;
       }
+    }
+    i + i {
+      padding-left: 10px;
     }
   }
 }

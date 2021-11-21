@@ -3,7 +3,6 @@
     <el-icon class="mg-input__prefix"><Search /></el-icon>
     <input
       class="mg-input__inner"
-      
       placeholder="搜索歌曲、歌手"
       :value="modelValue"
       @input="$emit('update:modelValue', $event.target.value)"

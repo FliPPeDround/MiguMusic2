@@ -1,6 +1,7 @@
 // 控制应用生命周期和创建原生浏览器窗口的模组
 const { app, BrowserWindow, screen, ipcMain } = require('electron')
 const path = require('path')
+const { miguLogin } = require('./migu_api/login.js')
 
 const NODE_ENV = process.env.NODE_ENV
 
@@ -56,6 +57,12 @@ app.whenReady().then(() => {
     // 打开的窗口，那么程序会重新创建一个窗口。
     if (BrowserWindow.getAllWindows().length === 0) createWindow()
   })
+})
+
+// 登陆接口
+ipcMain.on('login', async e => {
+  const loginData = await miguLogin()
+  e.returnValue = loginData
 })
 
 ipcMain.on('close', e =>

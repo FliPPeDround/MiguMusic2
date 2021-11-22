@@ -10,6 +10,7 @@ specifiers:
   electron-builder: ^22.13.1
   element-plus: ^1.2.0-beta.3
   pinia: ^2.0.0-rc.10
+  qs: ^6.10.1
   sass: ^1.43.4
   unplugin-vue-components: ^0.17.2
   vite: ^2.6.4
@@ -22,6 +23,7 @@ dependencies:
   axios: registry.npmmirror.com/axios/0.24.0
   element-plus: registry.npmmirror.com/element-plus/1.2.0-beta.3_vue@3.2.21
   pinia: registry.npmmirror.com/pinia/2.0.0-rc.10_vue@3.2.21
+  qs: registry.nlark.com/qs/6.10.1
   unplugin-vue-components: registry.npmmirror.com/unplugin-vue-components/0.17.2_vite@2.6.14+vue@3.2.21
   vue: registry.npmmirror.com/vue/3.2.21
   vue-router: registry.npmmirror.com/vue-router/4.0.12_vue@3.2.21
@@ -436,6 +438,15 @@ packages:
       normalize-url: registry.nlark.com/normalize-url/4.5.1
       responselike: registry.nlark.com/responselike/1.0.2
     dev: true
+
+  registry.nlark.com/call-bind/1.0.2:
+    resolution: {integrity: sha1-sdTonmiBGcPJqQOtMKuy9qkZvjw=, registry: http://registry.npm.taobao.org/, tarball: https://registry.nlark.com/call-bind/download/call-bind-1.0.2.tgz}
+    name: call-bind
+    version: 1.0.2
+    dependencies:
+      function-bind: registry.nlark.com/function-bind/1.1.1
+      get-intrinsic: registry.nlark.com/get-intrinsic/1.1.1
+    dev: false
 
   registry.nlark.com/camelcase/6.2.0:
     resolution: {integrity: sha1-kkr4gcnVJaydh/QNlk5c6pgqGAk=, registry: http://registry.npm.taobao.org/, tarball: https://registry.nlark.com/camelcase/download/camelcase-6.2.0.tgz}
@@ -899,6 +910,16 @@ packages:
     engines: {node: 6.* || 8.* || >= 10.*}
     dev: true
 
+  registry.nlark.com/get-intrinsic/1.1.1:
+    resolution: {integrity: sha1-FfWfN2+FXERpY5SPDSTNNje0q8Y=, registry: http://registry.npm.taobao.org/, tarball: https://registry.nlark.com/get-intrinsic/download/get-intrinsic-1.1.1.tgz}
+    name: get-intrinsic
+    version: 1.1.1
+    dependencies:
+      function-bind: registry.nlark.com/function-bind/1.1.1
+      has: registry.nlark.com/has/1.0.3
+      has-symbols: registry.nlark.com/has-symbols/1.0.2
+    dev: false
+
   registry.nlark.com/get-stream/4.1.0:
     resolution: {integrity: sha1-wbJVV189wh1Zv8ec09K0axw6VLU=, registry: http://registry.npm.taobao.org/, tarball: https://registry.nlark.com/get-stream/download/get-stream-4.1.0.tgz}
     name: get-stream
@@ -1004,6 +1025,13 @@ packages:
     version: 4.0.0
     engines: {node: '>=8'}
     dev: true
+
+  registry.nlark.com/has-symbols/1.0.2:
+    resolution: {integrity: sha1-Fl0wcMADCXUqEjakeTMeOsVvFCM=, registry: http://registry.npm.taobao.org/, tarball: https://registry.nlark.com/has-symbols/download/has-symbols-1.0.2.tgz}
+    name: has-symbols
+    version: 1.0.2
+    engines: {node: '>= 0.4'}
+    dev: false
 
   registry.nlark.com/has-yarn/2.1.0:
     resolution: {integrity: sha1-E34RNUp7W/EapctknPDG8/8rLnc=, registry: http://registry.npm.taobao.org/, tarball: https://registry.nlark.com/has-yarn/download/has-yarn-2.1.0.tgz}
@@ -1397,6 +1425,12 @@ packages:
     dev: true
     optional: true
 
+  registry.nlark.com/object-inspect/1.11.0:
+    resolution: {integrity: sha1-nc6xRs7dQUig2eUauI00z1CZIrE=, registry: http://registry.npm.taobao.org/, tarball: https://registry.nlark.com/object-inspect/download/object-inspect-1.11.0.tgz}
+    name: object-inspect
+    version: 1.11.0
+    dev: false
+
   registry.nlark.com/object-keys/1.1.1:
     resolution: {integrity: sha1-HEfyct8nfzsdrwYWd9nILiMixg4=, registry: http://registry.npm.taobao.org/, tarball: https://registry.nlark.com/object-keys/download/object-keys-1.1.1.tgz}
     name: object-keys
@@ -1532,6 +1566,15 @@ packages:
     dependencies:
       escape-goat: registry.nlark.com/escape-goat/2.1.1
     dev: true
+
+  registry.nlark.com/qs/6.10.1:
+    resolution: {integrity: sha1-STFIL6jWR6Wqt5nFJx0hM7mB+2o=, registry: http://registry.npm.taobao.org/, tarball: https://registry.nlark.com/qs/download/qs-6.10.1.tgz}
+    name: qs
+    version: 6.10.1
+    engines: {node: '>=0.6'}
+    dependencies:
+      side-channel: registry.nlark.com/side-channel/1.0.4
+    dev: false
 
   registry.nlark.com/queue-microtask/1.2.3:
     resolution: {integrity: sha1-SSkii7xyTfrEPg77BYyve2z7YkM=, registry: http://registry.npm.taobao.org/, tarball: https://registry.nlark.com/queue-microtask/download/queue-microtask-1.2.3.tgz}
@@ -1734,6 +1777,16 @@ packages:
     version: 3.0.0
     engines: {node: '>=8'}
     dev: true
+
+  registry.nlark.com/side-channel/1.0.4:
+    resolution: {integrity: sha1-785cj9wQTudRslxY1CkAEfpeos8=, registry: http://registry.npm.taobao.org/, tarball: https://registry.nlark.com/side-channel/download/side-channel-1.0.4.tgz}
+    name: side-channel
+    version: 1.0.4
+    dependencies:
+      call-bind: registry.nlark.com/call-bind/1.0.2
+      get-intrinsic: registry.nlark.com/get-intrinsic/1.1.1
+      object-inspect: registry.nlark.com/object-inspect/1.11.0
+    dev: false
 
   registry.nlark.com/slice-ansi/1.0.0:
     resolution: {integrity: sha1-BE8aSdiEL/MHqta1Be0Xi9lQE00=, registry: http://registry.npm.taobao.org/, tarball: https://registry.nlark.com/slice-ansi/download/slice-ansi-1.0.0.tgz}

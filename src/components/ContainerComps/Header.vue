@@ -27,7 +27,7 @@
 
 <script setup>
 import Input from './../CommonComps/mgInput/mg-input.vue'
-import { Minus, Close } from '@element-plus/icons'
+import { Minus, Close, User } from '@element-plus/icons'
 import { ref } from 'vue'
 const { ipcRenderer }  = window.require('electron')
 
@@ -44,6 +44,7 @@ const onBlur = () => {
   console.log('this is blur')
   visible.value = false
 }
+
 
 // frame-box
 const minimize = () => {

@@ -1,5 +1,5 @@
 ### 项目初始化
-pnpm init
+pnpm i
 
 ### 启动项目
 pnpm dev

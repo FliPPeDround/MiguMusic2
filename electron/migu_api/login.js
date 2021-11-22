@@ -31,14 +31,14 @@ const miguLogin = async () => {
         token = res.data.result.token
         console.log('ok')
         axios({
-          url: 'https://muscic.migu.cn/v3/user/login',
+          url: 'https://music.migu.cn/v3/user/login',
           method: 'get',
           headers: {
             referer: 'https://passport.migu.cn/',
             'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36 Edg/95.0.1020.53'
           },
           data: {
-            callbackUrl: 'https://muscic.migu.cn/v3',
+            callbackUrl: 'https://music.migu.cn/v3',
             relayState: '',
             token: res.data.result.token,
             qrclogin: 1

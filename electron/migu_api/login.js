@@ -32,7 +32,11 @@ const miguLogin = async () => {
         console.log('ok')
         axios({
           url: `https://music.migu.cn/v3/user/login?callbackURL=https%3A%2F%2Fmusic.migu.cn%2Fv3&relayState=&token=${res.data.result.token}&qrclogin=1`,
-          method: 'get'
+          method: 'get',
+          headers: {
+            referer: 'https://passport.migu.cn/',
+            'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36 Edg/95.0.1020.53'
+          },
         }).then((response) => {
           console.log(response.headers['set-cookie'])
         })

@@ -64,6 +64,10 @@ ipcMain.on('login', async e => {
   const loginData = await miguLogin()
   e.returnValue = loginData
 })
+// dialog通知
+ipcMain.on('dialogClose', () => {
+  
+})
 
 ipcMain.on('close', e =>
   mainWindow.hide()

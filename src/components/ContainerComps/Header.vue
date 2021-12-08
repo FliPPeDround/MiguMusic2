@@ -1,4 +1,17 @@
 <template>
+  <el-dialog
+      v-model="loginDialog"
+      title="扫码登陆"
+      width="20%"
+      center
+      destroy-on-close
+      @close="handleClose"
+    >
+    <img
+      class="qrcode"
+      :src="qrcUrl"
+      alt="二维码">
+  </el-dialog>
   <div class="header-box">
     <div class="logo-box">
       <img src="./../../assets/logo.png">
@@ -18,9 +31,12 @@
           @blur="onBlur"/>
       </template>
     </el-popover>
-    <div class="frame-box">
-      <el-icon @click="minimize"><Minus /></el-icon>
-      <el-icon @click="close"><Close /></el-icon>
+    <div class="methods-box">
+      <el-button :icon="User" circle class="user-icon" @click="login"></el-button>
+      <div class="frame-box">
+        <el-icon @click="minimize"><Minus /></el-icon>
+        <el-icon @click="close"><Close /></el-icon>
+      </div>
     </div>
   </div>
 </template>
@@ -31,6 +47,8 @@ import { Minus, Close, User } from '@element-plus/icons'
 import { ref } from 'vue'
 const { ipcRenderer }  = window.require('electron')
 
+
+// search-box
 const searchWord = ref('')
 const visible = ref(false)
 const onFocus = () => {
@@ -45,6 +63,16 @@ const onBlur = () => {
   visible.value = false
 }
 
+// login
+const loginDialog = ref(false)
+const qrcUrl = ref('')
+const login = () => {
+  qrcUrl.value = ipcRenderer.sendSync('login')
+  loginDialog.value = true
+}
+const handleClose = () => {
+  ipcRenderer.send('dialogClosed')
+}
 
 // frame-box
 const minimize = () => {
@@ -72,21 +100,51 @@ const close = () => {
       cursor: pointer;
     }
   }
-  .frame-box {
+
+  .methods-box {
     height: 40px;
+    width: 10vw;
     display: flex;
-    align-items: center;
-    -webkit-app-region: no-drag;
-    i {
-      color: #999999;
-      font-size: 18px;
-      &:hover {
-        color: #e50076;
+    justify-content: space-between;
+    .frame-box {
+      height: 40px;
+      display: flex;
+      align-items: center;
+      -webkit-app-region: no-drag;
+      i {
+        color: #999999;
+        font-size: 18px;
+        &:hover {
+          color: #e50076;
+        }
       }
-    }
-    i + i {
-      padding-left: 10px;
+      i + i {
+        padding-left: 10px;
+      }
     }
   }
 }
 </style>
+
+<!-- 修改el-ui默认样式 -->
+<style lang='scss'>
+.el-dialog {
+  // border-radius: var(--el-border-radius-round) !important;
+  .el-dialog__body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 !important;
+    // border-bottom-right-radius: 20px !important;
+    // border-bottom-left-radius: 20px !important;
+    .qrcode {
+      object-fit: fill;
+      width: 20vw;
+      height: 20vw;
+      border-radius: 8px;
+    }
+  }
+}
+
+</style>
+

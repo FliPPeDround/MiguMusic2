@@ -23,6 +23,10 @@ import Aside from './components/ContainerComps/Aside.vue'
   margin: 0;
   padding: 0;
 }
+:root {
+  --el-border-radius-small: 8px;
+  --el-color-primary: #E50078;
+}
 #app {
   width: 100vw;
   height: 100vh;
@@ -51,6 +55,9 @@ import Aside from './components/ContainerComps/Aside.vue'
       border-radius: 8px;
       background-color: #F1F6FA;
     }
+  }
+  i,svg,path { 
+    cursor: pointer !important;
   }
 }
 </style>

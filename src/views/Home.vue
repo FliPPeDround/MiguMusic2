@@ -5,6 +5,7 @@
 
 <script setup>
 import { ref } from 'vue'
+
 const { ipcRenderer }  = window.require('electron')
 
 const qrcUrl = ref('')

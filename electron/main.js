@@ -1,7 +1,7 @@
 // 控制应用生命周期和创建原生浏览器窗口的模组
 const { app, BrowserWindow, screen, ipcMain } = require('electron')
 const path = require('path')
-const { miguLogin } = require('./migu_api/login.js')
+const { miguLogin, clearTimer } = require('./migu_api/login.js')
 
 const NODE_ENV = process.env.NODE_ENV
 
@@ -64,9 +64,10 @@ ipcMain.on('login', async e => {
   const loginData = await miguLogin()
   e.returnValue = loginData
 })
-// dialog通知
-ipcMain.on('dialogClose', () => {
-  
+
+// dialog关闭通知
+ipcMain.on('dialogClosed', () => {
+  clearTimer()
 })
 
 ipcMain.on('close', e =>

@@ -52,14 +52,11 @@ const { ipcRenderer }  = window.require('electron')
 const searchWord = ref('')
 const visible = ref(false)
 const onFocus = () => {
-  console.log('this is focus')
   visible.value = true
 }
 const onInput = () => {
-  console.log('this is input')
 }
 const onBlur = () => {
-  console.log('this is blur')
   visible.value = false
 }
 

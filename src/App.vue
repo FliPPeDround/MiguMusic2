@@ -16,6 +16,10 @@
 <script setup>
 import Header from './components/ContainerComps/Header.vue'
 import Aside from './components/ContainerComps/Aside.vue'
+
+import { useStore } from "./store/home.js";
+const store = useStore()
+store.requestMigu()
 </script>
 
 <style lang="scss">

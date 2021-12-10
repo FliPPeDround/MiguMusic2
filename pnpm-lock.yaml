@@ -963,20 +963,6 @@ packages:
       ini: registry.nlark.com/ini/2.0.0
     dev: true
 
-  registry.nlark.com/global-tunnel-ng/2.7.1:
-    resolution: {integrity: sha1-0DtRAt/eOmmRT17n2GdhyjXVfY8=, registry: http://registry.npm.taobao.org/, tarball: https://registry.nlark.com/global-tunnel-ng/download/global-tunnel-ng-2.7.1.tgz}
-    name: global-tunnel-ng
-    version: 2.7.1
-    engines: {node: '>=0.10'}
-    requiresBuild: true
-    dependencies:
-      encodeurl: registry.nlark.com/encodeurl/1.0.2
-      lodash: registry.nlark.com/lodash/4.17.21
-      npm-conf: registry.nlark.com/npm-conf/1.1.3
-      tunnel: registry.nlark.com/tunnel/0.0.6
-    dev: true
-    optional: true
-
   registry.nlark.com/globalthis/1.0.2:
     resolution: {integrity: sha1-KiNdNPTYA2IZ9+NJKbXenhgWa4s=, registry: http://registry.npm.taobao.org/, tarball: https://registry.nlark.com/globalthis/download/globalthis-1.0.2.tgz}
     name: globalthis
@@ -2172,7 +2158,7 @@ packages:
       sumchecker: registry.npmmirror.com/sumchecker/3.0.1
     optionalDependencies:
       global-agent: registry.nlark.com/global-agent/3.0.0
-      global-tunnel-ng: registry.nlark.com/global-tunnel-ng/2.7.1
+      global-tunnel-ng: registry.npmmirror.com/global-tunnel-ng/2.7.1
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -3043,6 +3029,20 @@ packages:
       once: registry.nlark.com/once/1.4.0
       path-is-absolute: registry.nlark.com/path-is-absolute/1.0.1
     dev: true
+
+  registry.npmmirror.com/global-tunnel-ng/2.7.1:
+    resolution: {integrity: sha1-0DtRAt/eOmmRT17n2GdhyjXVfY8=, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/global-tunnel-ng/download/global-tunnel-ng-2.7.1.tgz}
+    name: global-tunnel-ng
+    version: 2.7.1
+    engines: {node: '>=0.10'}
+    requiresBuild: true
+    dependencies:
+      encodeurl: registry.nlark.com/encodeurl/1.0.2
+      lodash: registry.nlark.com/lodash/4.17.21
+      npm-conf: registry.nlark.com/npm-conf/1.1.3
+      tunnel: registry.nlark.com/tunnel/0.0.6
+    dev: true
+    optional: true
 
   registry.npmmirror.com/graceful-fs/4.2.8:
     resolution: {integrity: sha1-5BK40z9eAGWTy9PO5t+fLOu+gCo=, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/graceful-fs/download/graceful-fs-4.2.8.tgz}

@@ -6,7 +6,7 @@
     indicator-position="none"
     >
     <el-carousel-item
-      v-for="(item, index) in bannerList"
+      v-for="(item, index) in store.bannerList"
       :key="index">
       <img
         class="banner-img"
@@ -21,11 +21,9 @@
 
 <script setup>
 import { useStore } from './../../store/home.js'
-import { computed, ref } from 'vue'
 const { shell } = window.require('electron')
 
 const store = useStore()
-const bannerList = computed(() => store.bannerList)
 
 // 测试方法
 const playMusic = (cid) => {

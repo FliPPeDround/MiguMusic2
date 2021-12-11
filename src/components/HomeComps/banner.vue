@@ -2,13 +2,13 @@
   <el-carousel
     :interval="4000"
     type="card"
-    height="138px"
+    height="175.5px"
     indicator-position="none"
     >
     <el-carousel-item
-      v-for="(item, index) in store.bannerList"
+      v-for="(item, index) in bannerList"
       :key="index">
-      <img
+      <el-image
         class="banner-img"
         ref="imgHight"
         :src="'https:'+item.image"
@@ -21,9 +21,11 @@
 
 <script setup>
 import { useStore } from './../../store/home.js'
+import { computed } from 'vue'
 const { shell } = window.require('electron')
 
 const store = useStore()
+const bannerList = computed ( () => store.bannerList)
 
 // 测试方法
 const playMusic = (cid) => {

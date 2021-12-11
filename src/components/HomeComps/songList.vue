@@ -7,7 +7,7 @@
       @click="handleClick(item.id)"
     >
       <div class="img-box">
-        <img :src="item.image" alt="item.title" class="item-img" ref="playlistImg" @load="loadImg" />
+        <el-image :src="item.image" alt="item.title" class="item-img" @load="loadImg" />
         <img class="cf-play" src="./../../assets/btn-play.png" @click.stop="getPlaylist" />
       </div>
       <div class="item-info">{{ item.title }}</div>

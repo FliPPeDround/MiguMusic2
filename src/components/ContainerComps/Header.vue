@@ -32,7 +32,7 @@
       </template>
     </el-popover>
     <div class="methods-box">
-      <el-button :icon="User" circle class="user-icon" @click="login"></el-button>
+      <el-avatar :icon="UserFilled" :size="30" @click="login"></el-avatar>
       <div class="frame-box">
         <el-icon @click="minimize"><Minus /></el-icon>
         <el-icon @click="close"><Close /></el-icon>
@@ -43,7 +43,7 @@
 
 <script setup>
 import Input from './../CommonComps/mgInput/mg-input.vue'
-import { Minus, Close, User } from '@element-plus/icons'
+import { Minus, Close, UserFilled } from '@element-plus/icons'
 import { ref } from 'vue'
 const { ipcRenderer }  = window.require('electron')
 
@@ -103,6 +103,7 @@ const close = () => {
     width: 10vw;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     .frame-box {
       height: 40px;
       display: flex;

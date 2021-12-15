@@ -7,7 +7,7 @@ export const useStore = defineStore({
     bannerList: [],
     songList: [],
     newsongList: [],
-    newalbum: []
+    newalbumList: []
   }),
   actions: {
     async requestMigu () {

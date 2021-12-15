@@ -48,6 +48,7 @@ const store = useStore()
     .song-info {
       cursor: pointer;
       font-size: 1vw;
+      color: #333;
       .singer-txt {
         &:hover {
           color: #e50078;

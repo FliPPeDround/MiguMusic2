@@ -27,6 +27,24 @@ const { shell } = window.require('electron')
 const store = useStore()
 const bannerList = computed ( () => store.bannerList)
 
+// const bannerHight = ref()
+// const imgHight = ref(null)
+// const imgLoad = async () => {
+//   await nextTick(() => {
+//     // bannerHight.value = imgHight.value.height
+//     console.log(imgHight.value?.height)
+//   })
+// }
+
+// onMounted(async () => {
+//   await imgLoad()
+//   window.addEventListener('resize', () => {
+//     // bannerHight = imgHight.value
+//     console.log(imgHight.value?.height)
+//     imgLoad()
+//   }, false)
+// })
+
 // 测试方法
 const playMusic = (cid) => {
   console.log(cid)

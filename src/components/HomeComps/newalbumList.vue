@@ -56,7 +56,7 @@ const store = useStore()
       text-align: left;
       color: #333;
       vertical-align: bottom;
-      font-size: 14px;
+      font-size: 1vw;
       overflow: hidden;
       text-overflow: ellipsis;
       transition: color 0.4s;

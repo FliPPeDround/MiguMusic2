@@ -13,7 +13,6 @@
         ref="imgHight"
         :src="'https:'+item.image"
         @click="handleClick(item.url)"
-        @load="imgLoad"
       />
     </el-carousel-item>
   </el-carousel>

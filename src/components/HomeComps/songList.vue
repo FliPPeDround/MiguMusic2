@@ -7,7 +7,8 @@
       @click="handleClick(item.id)"
     >
       <div class="img-box">
-        <el-image :src="item.image" alt="item.title" class="item-img" @load="loadImg" />
+        <el-image :src="item.image" alt="item.title" class="item-img"/>
+        <el-image :src="item.image" alt="item.title" class="item-img-bg"/>
         <img class="cf-play" src="./../../assets/btn-play.png" @click.stop="getPlaylist" />
       </div>
       <div class="item-info">{{ item.title }}</div>
@@ -41,7 +42,7 @@ const handleClick = (id) => {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   column-gap: 1.5vw;
-  row-gap: .7vw;
+  row-gap: 1.1vw;
   .item-box {
     width: calc(12.8vw - 6.67px);
     // width: 12vw;
@@ -52,15 +53,31 @@ const handleClick = (id) => {
     }
     .img-box {
       width: 100%;
+      height: calc(12.8vw - 6.67px);
       position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      border-radius: 8px;
+      .item-img-bg {
+        filter: blur(30px);
+        width: calc(12.8vw - 6.67px);
+        height: calc(12.8vw - 6.67px);
+        top: 0;
+        left: 0;
+        position: absolute;
+        border-radius: 8px;
+      }
       &:hover {
         .cf-play {
           opacity: 1;
         }
       }
       .item-img {
-        width: 100%;
+        width: 70%;
         border-radius: 8px;
+        z-index: 2;
       }
       .cf-play {
         opacity: 0;

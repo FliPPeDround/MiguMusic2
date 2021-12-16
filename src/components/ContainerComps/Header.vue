@@ -127,14 +127,11 @@ const close = () => {
 <!-- 修改el-ui默认样式 -->
 <style lang='scss'>
 .el-dialog {
-  // border-radius: var(--el-border-radius-round) !important;
   .el-dialog__body {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0 !important;
-    // border-bottom-right-radius: 20px !important;
-    // border-bottom-left-radius: 20px !important;
     .qrcode {
       object-fit: fill;
       width: 20vw;

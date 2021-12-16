@@ -17,7 +17,7 @@
 import Header from './components/ContainerComps/Header.vue'
 import Aside from './components/ContainerComps/Aside.vue'
 
-import { useStore } from "./store/home.js";
+import { useStore } from './store/home.js'
 const store = useStore()
 store.requestMigu()
 </script>
@@ -60,7 +60,7 @@ store.requestMigu()
       background-color: #F1F6FA;
     }
   }
-  i,svg,path { 
+  i,svg,path {
     cursor: pointer !important;
   }
 }

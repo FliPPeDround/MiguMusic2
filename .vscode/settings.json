@@ -1,0 +1,6 @@
+// setting.json文件中
+{
+  "editor.codeActionsOnSave": {
+          "source.fixAll.eslint": true
+  },
+}

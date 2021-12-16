@@ -36,14 +36,13 @@ function createWindow () {
   mainWindow.loadURL(
     NODE_ENV === 'development'
       ? 'http://localhost:3000'
-      :`file://${path.join(__dirname, '../dist/index.html')}`
-  );
+      : `file://${path.join(__dirname, '../dist/index.html')}`
+  )
 
   // 打开开发工具
-  if (NODE_ENV === "development") {
+  if (NODE_ENV === 'development') {
     mainWindow.webContents.openDevTools()
   }
-
 }
 
 // 这段程序将会在 Electron 结束初始化

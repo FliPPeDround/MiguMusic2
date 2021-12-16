@@ -5,7 +5,7 @@ const fs = require('fs')
 let loginData = {}
 let timer
 const miguLogin = async () => {
-  const qrRes = await axios.post('https://passport.migu.cn/api/qrcWeb/qrcLogin?sourceid=220001',{
+  const qrRes = await axios.post('https://passport.migu.cn/api/qrcWeb/qrcLogin?sourceid=220001', {
     params: {
       isAsync: true,
       sourceid: 220001
@@ -35,13 +35,13 @@ const miguLogin = async () => {
         headers: {
           referer: 'https://passport.migu.cn/',
           'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36 Edg/95.0.1020.53'
-        },
+        }
       })
       let cookie
       const cookieArray = await cookieRes.headers['set-cookie']
       cookieArray.forEach((item) => {
-        const cookie_str = item.split(';')[0]
-        cookie += cookie_str + ';'
+        const cookieStr = item.split(';')[0]
+        cookie += cookieStr + ';'
       })
       fs.writeFile('./electron/migu_api/cookie.js', `module.exports = {migu_cookie = '${cookie}'}`, (err) => {
         if (err) {

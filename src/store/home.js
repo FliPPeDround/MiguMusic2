@@ -1,8 +1,8 @@
-import { defineStore } from "pinia"
-import axios from "axios"
+import { defineStore } from 'pinia'
+import axios from 'axios'
 
 export const useStore = defineStore({
-  id: "homeState",
+  id: 'homeState',
   state: () => ({
     bannerList: [],
     songList: [],

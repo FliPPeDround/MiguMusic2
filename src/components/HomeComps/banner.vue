@@ -24,7 +24,7 @@ import { computed } from 'vue'
 const { shell } = window.require('electron')
 
 const store = useStore()
-const bannerList = computed ( () => store.bannerList)
+const bannerList = computed(() => store.bannerList)
 
 // const bannerHight = ref()
 // const imgHight = ref(null)

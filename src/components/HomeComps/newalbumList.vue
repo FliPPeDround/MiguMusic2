@@ -1,21 +1,21 @@
 <template>
-    <div class="album-list">
-      <div class="album-box" v-for="(item, index) in store.newalbumList.slice(0, 6)">
-        <el-image :src="'https:'+item.image" class="item-img" alt fit="fill"/>
-        <div class="album-info">
-          <h3 class="album-name">{{item.albumName}}</h3>
-          <div class="singer-name">
-            <span
-                v-for="(item, index) in item.singers"
-                :key="index"
-              >
-              <span>{{ index > 0 ? ' / ' : '' }}</span>
-              <span class="singer-txt">{{ item.singerName }}</span>
-            </span>
-          </div>
+  <div class="album-list">
+    <div class="album-box" v-for="(item, index) in store.newalbumList.slice(0, 6)" :key="index">
+      <el-image :src="'https:'+item.image" class="item-img" alt fit="fill"/>
+      <div class="album-info">
+        <h3 class="album-name">{{item.albumName}}</h3>
+        <div class="singer-name">
+          <span
+              v-for="(item, index) in item.singers"
+              :key="index"
+            >
+            <span>{{ index > 0 ? ' / ' : '' }}</span>
+            <span class="singer-txt">{{ item.singerName }}</span>
+          </span>
         </div>
       </div>
     </div>
+  </div>
 </template>
 <script setup>
 import { useStore } from './../../store/home.js'
@@ -70,7 +70,6 @@ const store = useStore()
     }
 
     }
-    
   }
 }
 

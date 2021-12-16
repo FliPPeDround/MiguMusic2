@@ -45,8 +45,7 @@
 import Input from './../CommonComps/mgInput/mg-input.vue'
 import { Minus, Close, UserFilled } from '@element-plus/icons'
 import { ref } from 'vue'
-const { ipcRenderer }  = window.require('electron')
-
+const { ipcRenderer } = window.require('electron')
 
 // search-box
 const searchWord = ref('')
@@ -142,4 +141,3 @@ const close = () => {
 }
 
 </style>
-

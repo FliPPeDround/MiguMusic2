@@ -72,5 +72,4 @@ const store = useStore()
     }
   }
 }
-
 </style>

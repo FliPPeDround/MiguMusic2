@@ -34,16 +34,17 @@ store.requestMigu()
 #app {
   width: 100vw;
   height: 100vh;
-  background-color: #EEF4F9;
+  background-color: #F3F3F3;
   .el-header {
     -webkit-app-region: drag;
   }
   .el-main {
     width: 100%;
     height: calc(100vh - 135px);
-    background-color: #F1F6FA;
+    background-color: #F9F9F9;
     overflow: scroll;
     overflow-x: hidden;
+    border-radius: 8px;
     &:hover {
       &::-webkit-scrollbar-thumb{
         background-color: rgba(150, 150, 150, .4);
@@ -57,7 +58,7 @@ store.requestMigu()
     }
     &::-webkit-scrollbar-thumb{
       border-radius: 8px;
-      background-color: #F1F6FA;
+      background-color: #F9F9F9;
     }
   }
   i,svg,path {

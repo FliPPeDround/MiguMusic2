@@ -18,13 +18,20 @@
 
 <script setup>
 import { useStore } from '../../store/home.js'
+import { useRouter } from 'vue-router'
 
 // 引用vuex
 const store = useStore()
 
 // 测试方法
+const router = useRouter()
 const toPlaylistPage = (id) => {
-  console.log(id)
+  router.push({
+    path: '/songlist',
+    query: {
+      id: id
+    }
+  })
 }
 const getPlaylist = () => {
   console.log('getPlaylist')

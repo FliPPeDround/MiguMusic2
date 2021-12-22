@@ -15,7 +15,7 @@
 
 <script setup>
 import './mg-input.scss'
-import { Search, Close } from '@element-plus/icons'
+import { Search, Close } from '@element-plus/icons-vue'
 defineProps({
   modelValue: {
     type: String,

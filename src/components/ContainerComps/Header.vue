@@ -43,7 +43,7 @@
 
 <script setup>
 import Input from './../CommonComps/mgInput/mg-input.vue'
-import { Minus, Close, UserFilled } from '@element-plus/icons'
+import { Minus, Close, UserFilled } from '@element-plus/icons-vue'
 import { ref } from 'vue'
 const { ipcRenderer } = window.require('electron')
 

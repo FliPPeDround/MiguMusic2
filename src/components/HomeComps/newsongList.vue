@@ -35,12 +35,13 @@ const store = useStore()
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 1.5vw;
-  row-gap: .7vw;
+  row-gap: .4vw;
   .song-box {
     width: calc(27.1vw - 13.33px);
     display: grid;
     grid-template-columns: 1fr 4fr;
     column-gap: 1.5vw;
+    align-items: baseline;
     .item-img {
       cursor: pointer;
       border-radius: 8px;

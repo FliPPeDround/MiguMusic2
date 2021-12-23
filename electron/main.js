@@ -19,6 +19,7 @@ function createWindow () {
     frame: false,
     resizable: false,
     maximizable: false,
+    backgroundColor: '#00000000',
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
       title: '主窗口',

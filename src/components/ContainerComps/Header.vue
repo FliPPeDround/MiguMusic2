@@ -32,7 +32,7 @@
       </template>
     </el-popover>
     <div class="methods-box">
-      <el-avatar :icon="UserFilled" :size="30" @click="login"></el-avatar>
+      <el-avatar :icon="UserFilled" :size="30" @click="login" class="login-bar"></el-avatar>
       <div class="frame-box">
         <el-icon @click="minimize"><Minus /></el-icon>
         <el-icon @click="close"><Close /></el-icon>
@@ -103,6 +103,9 @@ const close = () => {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    .login-bar {
+      -webkit-app-region: no-drag;
+    }
     .frame-box {
       height: 40px;
       display: flex;

@@ -2,7 +2,7 @@
   <el-carousel
     :interval="4000"
     type="card"
-    height="13.7622vw"
+    height="14.1214vw"
     indicator-position="none"
     >
     <el-carousel-item

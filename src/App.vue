@@ -34,6 +34,7 @@ store.requestMigu()
 #app {
   width: 100vw;
   height: 100vh;
+  border-radius: 8px;
   background-color: #F3F3F3;
   .el-header {
     -webkit-app-region: drag;
